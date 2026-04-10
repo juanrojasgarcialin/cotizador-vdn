@@ -61,7 +61,7 @@ export default function AboutPage() {
 
       {/* ── Historia ── */}
       <section className="bg-gray-50 py-20">
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        <div className="max-w-6xl mx-auto px-5 md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="space-y-5">
             <span className="text-vdn-blue text-xs font-bold uppercase tracking-widest">Nuestra historia</span>
             <h2 className="font-heading text-3xl font-bold text-vdn-dark leading-tight">
@@ -114,7 +114,7 @@ export default function AboutPage() {
       {/* ── Estadísticas ── */}
       <section className="bg-gradient-to-r from-vdn-bluedk to-vdn-blue py-16 relative">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <StatBox value="25"  suffix="+" label="Años en el mercado" />
             <StatBox value="500" suffix="+" label="Proyectos entregados" />
             <StatBox value="6"          label="Líneas de servicio" />
@@ -132,8 +132,8 @@ export default function AboutPage() {
             <h2 className="font-heading text-3xl font-bold text-vdn-dark">Misión y Visión</h2>
             <div className="w-14 h-1 bg-vdn-pink mx-auto rounded-full" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-vdn-bluedk to-vdn-blue p-8 text-white">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-vdn-bluedk to-vdn-blue p-7 md:p-8 text-white">
               <div className="absolute top-4 right-4 opacity-10">
                 <Target size={80} />
               </div>
@@ -147,7 +147,7 @@ export default function AboutPage() {
                 de la comunicación.
               </p>
             </div>
-            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-gray-800 to-gray-950 p-8 text-white">
+            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-gray-800 to-gray-950 p-7 md:p-8 text-white">
               <div className="absolute top-4 right-4 opacity-10">
                 <Eye size={80} />
               </div>

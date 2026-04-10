@@ -157,8 +157,13 @@ export default function QuoterPage() {
                 {step === 1 && <Step2Cable data={formData} onChange={setFormData} />}
                 {step === 2 && <Step3CCTV data={formData} onChange={setFormData} />}
 
+                {/* Sidebar visible solo en móvil, entre form y botones */}
+                <div className="lg:hidden mt-4">
+                  <BudgetSidebar formData={formData} products={allProducts} settings={settings} step={step} />
+                </div>
+
                 {/* Navegación */}
-                <div className="flex justify-between pt-6">
+                <div className="flex justify-between pt-4">
                   <button onClick={goPrev} disabled={step === 0} className="btn-ghost">
                     <ChevronLeft size={16} /> Anterior
                   </button>
@@ -175,7 +180,10 @@ export default function QuoterPage() {
                 </div>
               </div>
 
-              <BudgetSidebar formData={formData} products={allProducts} settings={settings} step={step} />
+              {/* Sidebar solo en desktop */}
+              <div className="hidden lg:block">
+                <BudgetSidebar formData={formData} products={allProducts} settings={settings} step={step} />
+              </div>
             </div>
           ) : (
             <Step4Results quote={quote} onReset={handleReset} />

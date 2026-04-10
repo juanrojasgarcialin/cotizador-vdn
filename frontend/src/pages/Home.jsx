@@ -92,26 +92,26 @@ export default function Home() {
         <div className="absolute inset-0 opacity-10"
           style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
 
-        <div className="relative max-w-6xl mx-auto px-6 py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 animate-fadeup">
+        <div className="relative max-w-6xl mx-auto px-5 md:px-6 py-14 md:py-24 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div className="space-y-5 animate-fadeup">
             <span className="inline-block bg-vdn-green text-white text-xs font-bold px-3 py-1.5
                              rounded uppercase tracking-widest">
               Cotizador Profesional
             </span>
-            <h1 className="font-heading text-4xl md:text-5xl font-black text-white leading-tight">
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight">
               Presupuesta tu proyecto<br />
               <span className="text-vdn-green">de infraestructura</span><br />
               en minutos
             </h1>
-            <p className="text-blue-100 text-lg leading-relaxed max-w-md">
+            <p className="text-blue-100 text-base md:text-lg leading-relaxed max-w-md">
               Cableado estructurado y CCTV con precios reales de mercado.
               Materiales + mano de obra, desglosados al instante.
             </p>
-            <div className="flex gap-4 flex-wrap">
-              <Link to="/cotizar" className="btn-green text-base px-8 py-4 shadow-xl shadow-black/30">
-                <FileText size={18} /> Iniciar cotización
+            <div className="flex gap-3 flex-wrap">
+              <Link to="/cotizar" className="btn-green text-sm md:text-base px-6 md:px-8 py-3 md:py-4 shadow-xl shadow-black/30">
+                <FileText size={16} /> Iniciar cotización
               </Link>
-              <Link to="/nosotros" className="btn-outline text-base px-8 py-4">
+              <Link to="/nosotros" className="btn-outline text-sm md:text-base px-6 md:px-8 py-3 md:py-4">
                 Quiénes somos
               </Link>
             </div>

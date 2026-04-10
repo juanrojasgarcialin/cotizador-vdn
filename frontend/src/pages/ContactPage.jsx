@@ -52,7 +52,7 @@ export default function ContactPage() {
 
       <section className="bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-8">
 
             {/* ── Formulario ── */}
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
