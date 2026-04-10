@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "Bash(python seed_data.py)",
+      "Bash(uvicorn app.main:app --port 8000)",
+      "Bash(curl -s http://localhost:8000/)",
+      "Bash(curl -s http://localhost:8000/categories/)",
+      "Bash(python -m json.tool)",
+      "Bash(curl -s -X POST http://localhost:8000/quotes/ -H 'Content-Type: application/json' -d '{\"num_nodes\": 20, \"num_cameras\": 8, \"avg_distance_m\": 30, \"cable_type\": \"Cat6\", \"cable_product_id\": 1, \"keystone_product_id\": 16, \"faceplate_product_id\": 18, \"patch_cord_1m_product_id\": 19, \"patch_cord_3m_product_id\": 20, \"patch_panel_product_id\": 21, \"switch_product_id\": 23, \"client_name\": \"Prueba\"}')",
+      "Bash(npm create:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173/)",
+      "Bash(curl -s http://localhost:5173/api/categories/)",
+      "Bash(pkill -f uvicorn)",
+      "Bash(pkill -f \"npm run dev\")",
+      "Bash(rm -f C:/Users/QUIMICA/Desktop/Cotizador/backend/cotizador.db)",
+      "Bash(python -c ':*)",
+      "Bash(uvicorn app.main:app --reload --port 8000)",
+      "Bash(curl -s \"http://localhost:8000/products/?standard=Cat6&limit=20\")",
+      "WebFetch(domain:www.vdn.com.mx)",
+      "Bash(curl -s -o /dev/null -w \" | API: %{http_code}\" http://localhost:8000/health)",
+      "Bash(curl -s http://localhost:5173/)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(xargs sed:*)"
+    ]
+  }
+}

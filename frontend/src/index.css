@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Variables de color VDN ────────────────────────────────────────── */
+:root {
+  --vdn-blue:      #1565c0;
+  --vdn-bluedk:   #0d47a1;
+  --vdn-bluelt:   #1976d2;
+  --vdn-green:     #6dbe04;
+  --vdn-greendk:  #5aaa02;
+  --vdn-pink:      #e44993;
+  --vdn-dark:      #1d1d1d;
+  --vdn-black:     #010101;
+  --vdn-gray:      #6c757d;
+}
+
+/* ── Base ──────────────────────────────────────────────────────────── */
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ffffff;
+    color: var(--vdn-dark);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Merriweather', Georgia, serif;
+  }
+}
+
+/* ── Components ────────────────────────────────────────────────────── */
+@layer components {
+
+  /* Botones */
+  .btn-green {
+    @apply inline-flex items-center gap-2 px-6 py-3 text-white font-semibold
+           rounded text-sm tracking-wide uppercase active:scale-95
+           transition-all duration-200 shadow-md;
+    background-color: var(--vdn-green);
+  }
+  .btn-green:hover { background-color: var(--vdn-greendk); }
+
+  .btn-blue {
+    @apply inline-flex items-center gap-2 px-6 py-3 text-white font-semibold
+           rounded text-sm tracking-wide uppercase active:scale-95
+           transition-all duration-200 shadow-md;
+    background-color: var(--vdn-blue);
+  }
+  .btn-blue:hover { background-color: var(--vdn-bluedk); }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 border-2 border-white text-white
+           font-semibold rounded text-sm tracking-wide uppercase transition-all duration-200;
+  }
+  .btn-outline:hover { background-color: #ffffff; color: var(--vdn-blue); }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-4 py-2 border border-gray-300
+           rounded text-sm font-medium transition-all duration-200 bg-white;
+    color: var(--vdn-gray);
+  }
+  .btn-ghost:hover { border-color: var(--vdn-blue); color: var(--vdn-blue); }
+
+  /* Alias compatibilidad */
+  .btn-primary   { @apply btn-green; }
+  .btn-secondary { @apply btn-ghost; }
+  .btn-danger {
+    @apply inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white text-sm
+           font-medium rounded hover:bg-red-700 transition-colors;
+  }
+
+  /* Inputs */
+  .input {
+    @apply w-full px-3 py-2.5 border border-gray-300 rounded text-sm bg-white
+           focus:outline-none focus:border-transparent placeholder-gray-400 transition-shadow;
+  }
+  .input:focus { box-shadow: 0 0 0 2px var(--vdn-blue); }
+
+  .label {
+    @apply block text-sm font-semibold mb-1.5;
+    color: var(--vdn-dark);
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6;
+  }
+  .card-vdn {
+    @apply bg-white rounded-lg shadow-md p-6;
+    border-top: 4px solid var(--vdn-blue);
+  }
+
+  /* Badge */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  /* Sección */
+  .section-title {
+    @apply text-3xl font-bold leading-tight;
+    font-family: 'Merriweather', Georgia, serif;
+    color: var(--vdn-dark);
+  }
+  .section-subtitle {
+    @apply text-base leading-relaxed max-w-2xl;
+    color: var(--vdn-gray);
+  }
+}
+
+/* ── Animaciones ───────────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeup {
+  animation: fadeUp 0.5s ease both;
+}
+
+/* ── Print ─────────────────────────────────────────────────────────── */
+@media print {
+  header, footer, nav, .no-print { display: none !important; }
+  body { font-size: 12px; }
+}

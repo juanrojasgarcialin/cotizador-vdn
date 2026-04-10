@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.env
+.venv
+venv/
+env/
+
+# Base de datos local (no subir a git)
+*.db
+*.sqlite3
+
+# Logs
+*.log
+uvicorn.log
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.env.local
+frontend/.env.production
+
+# Imágenes de productos (se gestionan en el servidor)
+backend/static/images/
+
+# IDEs
+.vscode/
+.idea/
+*.DS_Store
